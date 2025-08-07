@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  digital-wallet-api:
+    build: .
+    container_name: digital-wallet-api
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_PROFILES_ACTIVE: docker
+    networks:
+      - wallet-net
+
+networks:
+  wallet-net:
